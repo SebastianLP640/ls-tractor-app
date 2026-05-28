@@ -76,6 +76,29 @@ body {
   display: flex;
   gap: 2px;
 }
+.nav-mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text);
+  font-size: 22px;
+}
+.mobile-drawer {
+  display: none;
+  position: absolute;
+  top: 64px; left: 0; right: 0;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  z-index: 99;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.mobile-drawer.open { display: flex; }
+.mobile-drawer .nav-tab { text-align: left; padding: 10px 14px; width: 100%; }
 .nav-tab {
   padding: 7px 16px;
   font-size: 13px;
@@ -855,11 +878,32 @@ body {
 @media (max-width: 640px) {
   .nav { padding: 0 16px; }
   .nav-tabs { display: none; }
-  .page { padding: 40px 20px 60px; }
-  .hero h1 { font-size: 38px; }
-  .sh-title { font-size: 30px; }
+  .nav-mobile-btn { display: block; }
+  .nav { position: relative; }
+  .page { padding: 28px 16px 48px; }
+  .value-strip { padding: 32px 16px; }
+  .hero { padding: 32px 16px 0; gap: 32px; }
+  .hero h1 { font-size: 32px; letter-spacing: -0.5px; }
+  .hero-desc { font-size: 15px; margin-bottom: 28px; }
+  .hero-btns { flex-direction: column; }
+  .hero-btns .btn-green, .hero-btns .btn-outline { width: 100%; text-align: center; justify-content: center; }
+  .hero-numbers { gap: 24px; }
+  .hero-num-val { font-size: 24px; }
+  .sh-title { font-size: 26px; }
+  .sh-sub { font-size: 14px; }
   .feat-grid, .phases-grid, .tech-grid { grid-template-columns: 1fr; }
   .hero-phones .phone-wrap.side { display: none; }
+  .hero-phones .phone-wrap.main .phone-shell { width: 200px; }
+  .screens-scroll { gap: 16px; padding: 0 16px 12px; margin: 0 -16px; }
+  .screen-phone-shell { width: 180px; }
+  .table-outer { border-radius: 10px; }
+  .ctable th, .ctable td { padding: 10px 12px; font-size: 12px; }
+  .phases-grid { grid-template-columns: 1fr; }
+  .github-box { padding: 24px 20px; }
+  .deploy-title { font-size: 22px; }
+  .code-block { font-size: 11px; padding: 12px 14px; }
+  .feat-card { padding: 20px 18px; }
+  .phase { padding: 20px 18px; }
 }
 </style>
 </head>
@@ -882,14 +926,24 @@ body {
     <button class="nav-tab" onclick="go('roadmap',this)">Roadmap</button>
     <button class="nav-tab" onclick="go('deploy',this)">Deploy</button>
   </div>
+  <button class="nav-mobile-btn" onclick="toggleDrawer()" aria-label="Menu">☰</button>
 </nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <button class="nav-tab active" id="md-overview" onclick="go('overview',this);toggleDrawer()">Przegląd</button>
+  <button class="nav-tab" id="md-screens" onclick="go('screens',this);toggleDrawer()">Ekrany</button>
+  <button class="nav-tab" id="md-features" onclick="go('features',this);toggleDrawer()">Funkcje</button>
+  <button class="nav-tab" id="md-compare" onclick="go('compare',this);toggleDrawer()">Konkurencja</button>
+  <button class="nav-tab" id="md-roadmap" onclick="go('roadmap',this);toggleDrawer()">Roadmap</button>
+  <button class="nav-tab" id="md-deploy" onclick="go('deploy',this);toggleDrawer()">Deploy</button>
+</div>
+
 
 <!-- ══ OVERVIEW ══ -->
 <div id="s-overview" class="section active">
 
   <div class="hero">
     <div class="hero-left">
-      <div class="hero-tag"><span class="hero-tag-dot"></span>Projekt 2025 · traktor.com.pl</div>
+      <div class="hero-tag"><span class="hero-tag-dot"></span>Projekt 2026 · traktor.com.pl</div>
       <h1>Aplikacja mobilna<br>dla właścicieli<br><em>traktorów LS</em></h1>
       <p class="hero-desc">Cyfrowy asystent który pilnuje przeglądów, pomaga przy awariach, łączy z serwisem i pokazuje pasujące części — wszystko po polsku.</p>
       <div class="hero-btns">
@@ -1484,6 +1538,9 @@ function go(id, btn) {
   document.getElementById('s-'+id).classList.add('active');
   if(btn && btn.classList) btn.classList.add('active');
   window.scrollTo(0,0);
+}
+function toggleDrawer() {
+  document.getElementById('mobileDrawer').classList.toggle('open');
 }
 </script>
 </body>
