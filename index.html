@@ -478,6 +478,27 @@ body {
   min-height: unset;
   overflow: hidden;
 }
+@media (max-width: 640px) {
+  .screens-scroll {
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 32px;
+    padding: 0;
+    align-items: center;
+  }
+  .screen-item { width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .screen-phone-shell {
+    width: min(300px, 80vw);
+    border-radius: 36px;
+    padding: 14px 11px;
+  }
+  .screen-phone-shell .phone-screen {
+    height: auto;
+    min-height: unset;
+    overflow: visible;
+  }
+  .screen-label { font-size: 11px; margin-bottom: 14px; }
+}
 
 /* awaria screen */
 .ps-awaria-row {
@@ -899,10 +920,6 @@ body {
   .feat-grid, .phases-grid, .tech-grid { grid-template-columns: 1fr; }
   .hero-phones .phone-wrap.side { display: none; }
   .hero-phones .phone-wrap.main .phone-shell { width: 200px; }
-  .screens-scroll { gap: 12px; padding: 0 20px 16px; margin: 0 -16px; }
-  .screen-phone-shell { width: 155px; border-radius: 24px; padding: 9px 7px; }
-  .screen-phone-shell .phone-screen { height: 340px; }
-  .screen-label { font-size: 9px; margin-bottom: 10px; }
   .table-outer { border-radius: 10px; }
   .ctable th, .ctable td { padding: 10px 12px; font-size: 12px; }
   .phases-grid { grid-template-columns: 1fr; }
