@@ -8,21 +8,21 @@
 <style>
 :root {
   --white: #FFFFFF;
-  --bg: #F8F9F6;
-  --bg2: #F2F4EF;
-  --border: #E2E6DA;
-  --border2: #D0D6C4;
-  --text: #1C2018;
-  --text2: #4A5240;
-  --text3: #7A8470;
+  --bg: #F5F4F0;
+  --bg2: #EEECE8;
+  --border: #E0DDD6;
+  --border2: #C8C4BC;
+  --text: #0D1B2A;
+  --text2: #555555;
+  --text3: #999999;
   --green: #E4FD71;
   --green-dark: #8AB800;
   --green-bg: #FAFEE8;
   --green-bg2: #F2FCB8;
-  --blue: #1E4FA0;
-  --blue-bg: #E8EEFA;
-  --blue-light: #4070C8;
-  --header-bg: #1C2018;
+  --blue: #1B4FA0;
+  --blue-bg: #EAF0FA;
+  --blue-light: #2255B0;
+  --header-bg: #0D1B2A;
   --nav-height: 64px;
 }
 
@@ -30,7 +30,7 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--white);
+  background: #FFFFFF;
   color: var(--text);
   line-height: 1.5;
 }
@@ -38,7 +38,7 @@ body {
 /* ── NAV ── */
 .nav {
   height: var(--nav-height);
-  background: var(--white);
+  background: #FFFFFF;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ body {
 }
 .nav-logo-icon {
   width: 34px; height: 34px;
-  background: var(--green);
+  background: #1B4FA0;
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   font-weight: 800; font-size: 14px; color: white;
@@ -89,7 +89,7 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 .nav-tab:hover { background: var(--bg); color: var(--text); }
-.nav-tab.active { background: var(--green); color: #1A1A1A; font-weight: 600; }
+.nav-tab.active { background: var(--green); color: #0D1B2A; font-weight: 700; }
 
 /* ── SECTIONS ── */
 .section { display: none; }
@@ -97,7 +97,7 @@ body {
 
 /* ── HERO ── */
 .hero {
-  background: var(--white);
+  background: #FFFFFF;
   padding: 72px 40px 0;
   max-width: 1280px;
   margin: 0 auto;
@@ -110,19 +110,19 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: var(--green-bg);
+  background: #EBF2FC;
   border: 1px solid var(--green-bg2);
   border-radius: 100px;
   padding: 5px 14px 5px 10px;
   font-size: 12px;
   font-weight: 600;
-  color: var(--green-dark);
+  color: #1B4FA0;
   margin-bottom: 28px;
 }
-.hero-tag-dot {
+.hero-tag-dot-fix {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--green);
+  background: #1B4FA0;
 }
 .hero h1 {
   font-family: 'DM Serif Display', serif;
@@ -150,8 +150,9 @@ body {
   margin-bottom: 56px;
   flex-wrap: wrap;
 }
+/* btn-green color fix */
 .btn-green {
-  background: var(--green);
+  background: #1B4FA0;
   color: #1A1A1A;
   border: none;
   padding: 13px 26px;
@@ -175,7 +176,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   transition: all 0.15s;
 }
-.btn-outline:hover { border-color: var(--green); color: var(--green-dark); }
+.btn-outline:hover { border-color: var(--green); color: #1B4FA0; }
 
 .hero-numbers {
   display: flex;
@@ -210,20 +211,20 @@ body {
   z-index: 1;
 }
 .phone-shell {
-  background: var(--text);
+  background: #0D1B2A;
   border-radius: 36px;
   padding: 14px 10px;
-  border: 2px solid #2E3428;
+  border: 2px solid #1A2F45;
   box-shadow: 0 24px 64px rgba(28,32,24,0.18), 0 0 0 1px rgba(255,255,255,0.05);
 }
 .phone-wrap.main .phone-shell { width: 220px; }
 .phone-wrap.side .phone-shell { width: 200px; }
 .phone-pill {
   width: 64px; height: 20px;
-  background: var(--text);
+  background: #0D1B2A;
   border-radius: 0 0 14px 14px;
   margin: 0 auto 10px;
-  border: 2px solid #2E3428;
+  border: 2px solid #1A2F45;
   border-top: none;
 }
 .phone-screen {
@@ -237,7 +238,7 @@ body {
 
 /* phone UI elements */
 .ps-topbar {
-  background: var(--text);
+  background: #0D1B2A;
   padding: 11px 14px;
   display: flex;
   align-items: center;
@@ -248,7 +249,7 @@ body {
 .ps-sub { font-size: 8px; color: rgba(255,255,255,0.4); margin-top: 1px; }
 .ps-avatar {
   width: 24px; height: 24px;
-  background: var(--green);
+  background: #1B4FA0;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 9px; font-weight: 700; color: white;
@@ -268,7 +269,7 @@ body {
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 3px;
-  background: var(--green);
+  background: #1B4FA0;
   border-radius: 3px 0 0 3px;
 }
 .ps-card-accent.blue { background: var(--blue); }
@@ -278,8 +279,8 @@ body {
 .ps-card-tag {
   display: inline-block;
   margin-top: 6px;
-  background: var(--green-bg);
-  color: var(--green-dark);
+  background: #EBF2FC;
+  color: #1B4FA0;
   font-size: 7px;
   font-weight: 700;
   padding: 2px 7px;
@@ -291,7 +292,7 @@ body {
 .ps-card-tag.yellow-tag { background: #FDF5E0; color: #96720F; }
 
 .ps-tractor {
-  background: linear-gradient(135deg, var(--text) 0%, #2C3226 100%);
+  background: linear-gradient(135deg, #0D1B2A 0%, #1A2F45 100%);
   border-radius: 10px;
   padding: 12px;
   margin-bottom: 8px;
@@ -378,7 +379,7 @@ body {
 .vs-icon {
   width: 42px; height: 42px;
   border-radius: 10px;
-  background: var(--green-bg);
+  background: #EBF2FC;
   display: flex; align-items: center; justify-content: center;
   font-size: 20px;
   margin-bottom: 16px;
@@ -401,7 +402,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--green-dark);
+  color: #1B4FA0;
   margin-bottom: 10px;
 }
 .sh-title {
@@ -441,10 +442,10 @@ body {
 }
 .screen-phone-shell {
   width: 210px;
-  background: var(--text);
+  background: #0D1B2A;
   border-radius: 34px;
   padding: 13px 10px;
-  border: 2px solid #2E3428;
+  border: 2px solid #1A2F45;
   box-shadow: 0 16px 48px rgba(28,32,24,0.14);
 }
 .screen-phone-shell .phone-pill { margin-bottom: 8px; }
@@ -472,7 +473,7 @@ body {
 }
 .ps-red-btn {
   background: #C0392B;
-  color: white;
+  color: #1A1A1A;
   border-radius: 7px;
   padding: 10px;
   text-align: center;
@@ -496,25 +497,25 @@ body {
 }
 .ps-product-img {
   width: 34px; height: 34px;
-  background: var(--green-bg);
+  background: #EBF2FC;
   border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
   font-size: 16px; flex-shrink: 0;
 }
 .ps-product-name { font-size: 8px; font-weight: 700; color: var(--text); }
 .ps-product-compat { font-size: 7px; color: var(--text3); margin-top: 1px; }
-.ps-product-price { font-size: 9px; font-weight: 800; color: var(--green-dark); margin-top: 2px; }
+.ps-product-price { font-size: 9px; font-weight: 800; color: #1B4FA0; margin-top: 2px; }
 .ps-add {
   margin-left: auto;
   width: 22px; height: 22px;
-  background: var(--green);
+  background: #1B4FA0;
   border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 14px; color: white; flex-shrink: 0;
+  font-size: 14px; color: #1A1A1A; flex-shrink: 0;
 }
 .ps-cart-btn {
-  background: var(--green);
-  color: #1A1A1A;
+  background: #1B4FA0;
+  color: white;
   border-radius: 7px;
   padding: 9px;
   text-align: center;
@@ -533,13 +534,13 @@ body {
 }
 .ps-slot.sel {
   border-color: var(--green);
-  background: var(--green-bg);
+  background: #EBF2FC;
 }
 .ps-slot-date { font-size: 9px; font-weight: 700; color: var(--text); }
-.ps-slot.sel .ps-slot-date { color: var(--green-dark); }
+.ps-slot.sel .ps-slot-date { color: #1B4FA0; }
 .ps-slot-time { font-size: 7px; color: var(--text3); margin-top: 2px; }
 .ps-green-btn {
-  background: var(--green);
+  background: #1B4FA0;
   color: #1A1A1A;
   border-radius: 7px;
   padding: 10px;
@@ -581,7 +582,7 @@ body {
   margin-bottom: 48px;
 }
 .feat-card {
-  background: var(--white);
+  background: #FFFFFF;
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 28px 24px;
@@ -593,15 +594,15 @@ body {
   box-shadow: 0 8px 32px rgba(107,168,32,0.08);
 }
 .feat-card.hl {
-  background: var(--green-bg);
-  border-color: var(--green-bg2);
+  background: #EBF2FC;
+  border-color: #C5D9F5;
 }
 .feat-card.hl:hover { border-color: var(--green); }
 .feat-badge {
   position: absolute;
   top: 20px; right: 20px;
-  background: var(--green);
-  color: white;
+  background: #1B4FA0;
+  color: #1A1A1A;
   font-size: 9px;
   font-weight: 700;
   padding: 3px 9px;
@@ -613,7 +614,7 @@ body {
 .feat-num {
   font-size: 10px;
   font-weight: 700;
-  color: var(--green-dark);
+  color: #1B4FA0;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 6px;
@@ -665,8 +666,8 @@ body {
   text-align: left;
 }
 .ctable th.our {
-  background: var(--green-bg);
-  color: var(--green-dark);
+  background: #EBF2FC;
+  color: #1B4FA0;
 }
 .ctable td {
   padding: 13px 22px;
@@ -677,13 +678,13 @@ body {
 .ctable tr:last-child td { border: none; }
 .ctable tr:hover td { background: var(--bg); }
 .ctable td.our { background: rgba(107,168,32,0.03); }
-.c-yes { color: var(--green-dark); font-weight: 600; }
+.c-yes { color: #1B4FA0; font-weight: 600; }
 .c-no { color: var(--border2); }
 .c-part { color: #C8960A; font-size: 12px; }
 .c-badge {
   display: inline-block;
-  background: var(--green-bg);
-  color: var(--green-dark);
+  background: #EBF2FC;
+  color: #1B4FA0;
   font-size: 10px;
   font-weight: 700;
   padding: 2px 8px;
@@ -715,8 +716,8 @@ body {
   padding: 28px 24px;
 }
 .phase.now {
-  background: var(--green-bg);
-  border-color: var(--green-bg2);
+  background: #EBF2FC;
+  border-color: #C5D9F5;
 }
 .phase-eyebrow {
   font-size: 10px;
@@ -726,7 +727,7 @@ body {
   color: var(--text3);
   margin-bottom: 6px;
 }
-.phase.now .phase-eyebrow { color: var(--green-dark); }
+.phase.now .phase-eyebrow { color: #1B4FA0; }
 .phase-time {
   font-size: 26px;
   font-weight: 800;
@@ -750,7 +751,7 @@ body {
   padding: 4px 10px;
   font-weight: 500;
 }
-.ptag.g { background: var(--green-bg2); border-color: transparent; color: var(--green-dark); }
+.ptag.g { background: var(--green-bg2); border-color: transparent; color: #1B4FA0; }
 .ptag.b { background: var(--blue-bg); border-color: transparent; color: var(--blue); }
 
 /* ── TECH ── */
@@ -770,7 +771,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--green-dark);
+  color: #1B4FA0;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 12px;
@@ -789,10 +790,10 @@ body {
 
 /* ── DEPLOY BOX ── */
 .deploy-box {
-  background: var(--text);
+  background: #0D1B2A;
   border-radius: 16px;
   padding: 48px;
-  color: white;
+  color: #1A1A1A;
   display: grid;
   grid-template-columns: 1fr 340px;
   gap: 48px;
@@ -831,9 +832,10 @@ body {
   color: rgba(255,255,255,0.75);
   line-height: 1.5;
 }
+
 .deploy-step-n {
   width: 26px; height: 26px;
-  background: var(--green);
+  background: #1B4FA0;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px;
@@ -873,7 +875,7 @@ body {
     </div>
   </div>
   <div class="nav-tabs">
-    <button class="nav-tab active" onclick="go('overview',this)">Przećląd</button>
+    <button class="nav-tab active" onclick="go('overview',this)">Przegląd</button>
     <button class="nav-tab" onclick="go('screens',this)">Ekrany</button>
     <button class="nav-tab" onclick="go('features',this)">Funkcje</button>
     <button class="nav-tab" onclick="go('compare',this)">Konkurencja</button>
@@ -1005,7 +1007,7 @@ body {
     <div class="sh">
       <div class="sh-eyebrow">Design aplikacji</div>
       <div class="sh-title">Ekrany — wizualizacja</div>
-      <div class="sh-sub">5 kluczowych ekranów inspirowanych designem traktor.com.pl — białe tło, zieloń jako akcent, czytelna hierarchia.</div>
+      <div class="sh-sub">5 kluczowych ekranów inspirowanych designem traktor.com.pl — białe tło, zieleń jako akcent, czytelna hierarchia.</div>
     </div>
 
     <div class="screens-scroll">
@@ -1050,7 +1052,7 @@ body {
         <div class="screen-phone-shell">
           <div class="phone-pill"></div>
           <div class="phone-screen">
-            <div class="ps-topbar" style="background:#1A1A1A">
+            <div class="ps-topbar" style="background:#0D1B2A">
               <div><div class="ps-title">🔧 Przegląd 900h</div><div class="ps-sub">MT3.40 · Do realizacji</div></div>
             </div>
             <div class="ps-body">
@@ -1061,8 +1063,8 @@ body {
               <div class="ps-check-row"><div class="ps-dot y"></div><div style="flex:1"><div class="ps-check-name">Filtr powietrza</div><div class="ps-check-status">⏳ Do wykonania</div><div class="ps-bar"><div class="ps-bar-fill y" style="width:0%"></div></div></div></div>
               <div class="ps-check-row"><div class="ps-dot r"></div><div style="flex:1"><div class="ps-check-name">Regulacja zaworów</div><div class="ps-check-status">⚠️ Wymagana</div><div class="ps-bar"><div class="ps-bar-fill r" style="width:0%"></div></div></div></div>
               <div style="display:flex;gap:5px;margin-top:8px">
-                <div style="flex:1;background:var(--green-bg);border:1px solid var(--green-bg2);border-radius:6px;padding:8px;text-align:center;font-size:7px;font-weight:700;color:var(--green-dark)">🛒 Zamów części</div>
-                <div style="flex:1;background:var(--green);border-radius:6px;padding:8px;text-align:center;font-size:7px;font-weight:700;color:white">📅 Umów serwis</div>
+                <div style="flex:1;background:var(--green);border-radius:6px;padding:8px;text-align:center;font-size:7px;font-weight:700;color:#1A1A1A">🛒 Zamów części</div>
+                <div style="flex:1;background:var(--green);border-radius:6px;padding:8px;text-align:center;font-size:7px;font-weight:700;color:#1A1A1A">📅 Umów serwis</div>
               </div>
             </div>
           </div>
@@ -1075,7 +1077,7 @@ body {
         <div class="screen-phone-shell">
           <div class="phone-pill"></div>
           <div class="phone-screen">
-            <div class="ps-topbar" style="background:#1A1A1A">
+            <div class="ps-topbar" style="background:#0D1B2A">
               <div><div class="ps-title">⚠️ Asystent Awarii</div><div class="ps-sub">MT3.40 HST · Diagnoza</div></div>
             </div>
             <div class="ps-body">
@@ -1093,42 +1095,115 @@ body {
       </div>
 
       <!-- 4: SKLEP -->
+      <!-- 4: SKLEP — redesign -->
       <div class="screen-item">
         <div class="screen-label">Sklep / Części</div>
         <div class="screen-phone-shell">
           <div class="phone-pill"></div>
-          <div class="phone-screen">
-            <div class="ps-topbar">
-              <div><div class="ps-title">🛒 Sklep</div><div class="ps-sub">Części do MT3.40 HST</div></div>
+          <div class="phone-screen" style="background:#F8F9FB;">
+            <div class="ps-topbar" style="background:#0D1B2A;">
+              <div><div class="ps-title">Sklep z częściami</div><div class="ps-sub">Dobrane do MT3.40 HST</div></div>
+              <div style="background:#E4FD71;border-radius:6px;padding:3px 8px;font-size:8px;font-weight:600;color:#0D1B2A;">3 🛒</div>
             </div>
-            <div class="ps-body">
-              <div style="background:var(--green-bg);border-radius:7px;padding:7px 9px;font-size:8px;color:var(--green-dark);font-weight:600;margin-bottom:8px">✅ 12 części do przeglądu 900h</div>
-              <div class="ps-label">Pasuje do Twojego modelu</div>
-              <div class="ps-product"><div class="ps-product-img">🛢️</div><div><div class="ps-product-name">Olej silnikowy 10W-40 5L</div><div class="ps-product-compat">MT3.40 / MT3.50 / MT3.60</div><div class="ps-product-price">89,90 zł</div></div><div class="ps-add">+</div></div>
-              <div class="ps-product"><div class="ps-product-img">🔩</div><div><div class="ps-product-name">Filtr oleju LS OEM</div><div class="ps-product-compat">MT3.35 / MT3.40 / MT3.50</div><div class="ps-product-price">42,00 zł</div></div><div class="ps-add">+</div></div>
-              <div class="ps-product"><div class="ps-product-img">💧</div><div><div class="ps-product-name">Filtr paliwa LS OEM</div><div class="ps-product-compat">MT3.40 HST · pasuje</div><div class="ps-product-price">38,50 zł</div></div><div class="ps-add">+</div></div>
-              <div class="ps-cart-btn">🛒 Koszyk (3 szt.) · 170,40 zł</div>
+            <div class="ps-body" style="display:flex;flex-direction:column;gap:6px;">
+              <div style="background:#EBF2FC;border-radius:7px;padding:7px 10px;display:flex;align-items:center;gap:6px;">
+                <span style="font-size:11px;">✅</span>
+                <span style="font-size:8px;font-weight:600;color:#1B4FA0;">12 części do przeglądu 900h</span>
+              </div>
+              <div style="display:flex;gap:5px;">
+                <div style="font-size:8px;font-weight:600;padding:4px 9px;border-radius:100px;background:#0D1B2A;color:white;">Wszystkie</div>
+                <div style="font-size:8px;padding:4px 9px;border-radius:100px;border:1px solid #D0D8E8;color:#555;background:white;">Filtry</div>
+                <div style="font-size:8px;padding:4px 9px;border-radius:100px;border:1px solid #D0D8E8;color:#555;background:white;">Oleje</div>
+              </div>
+              <div style="background:white;border-radius:10px;padding:10px;border:1.5px solid #1B4FA0;display:flex;gap:9px;align-items:center;">
+                <div style="width:40px;height:40px;border-radius:8px;background:#EBF2FC;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🛢️</div>
+                <div style="flex:1;">
+                  <div style="font-size:9px;font-weight:600;color:#0D1B2A;">Olej silnikowy 10W-40 5L</div>
+                  <div style="font-size:7px;color:#8A96A8;margin-top:1px;">MT3.40 / MT3.50 / MT3.60</div>
+                  <div style="font-size:11px;font-weight:600;color:#0D1B2A;margin-top:3px;">89,90 zł <span style="font-size:7px;color:#aaa;font-weight:400;text-decoration:line-through;">99,00 zł</span></div>
+                </div>
+                <div style="width:28px;height:28px;background:#E4FD71;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#0D1B2A;flex-shrink:0;">+</div>
+              </div>
+              <div style="background:white;border-radius:10px;padding:10px;border:1px solid #E4E8F0;display:flex;gap:9px;align-items:center;">
+                <div style="width:40px;height:40px;border-radius:8px;background:#EBF2FC;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🔩</div>
+                <div style="flex:1;">
+                  <div style="font-size:9px;font-weight:600;color:#0D1B2A;">Filtr oleju LS OEM</div>
+                  <div style="font-size:7px;color:#8A96A8;margin-top:1px;">MT3.35 / MT3.40 / MT3.50</div>
+                  <div style="font-size:11px;font-weight:600;color:#0D1B2A;margin-top:3px;">42,00 zł</div>
+                </div>
+                <div style="width:28px;height:28px;background:#E4FD71;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#0D1B2A;flex-shrink:0;">+</div>
+              </div>
+              <div style="background:white;border-radius:10px;padding:10px;border:1px solid #E4E8F0;display:flex;gap:9px;align-items:center;">
+                <div style="width:40px;height:40px;border-radius:8px;background:#EBF2FC;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">💧</div>
+                <div style="flex:1;">
+                  <div style="font-size:9px;font-weight:600;color:#0D1B2A;">Filtr paliwa LS OEM</div>
+                  <div style="font-size:7px;color:#8A96A8;margin-top:1px;">MT3.40 HST · pasuje</div>
+                  <div style="font-size:11px;font-weight:600;color:#0D1B2A;margin-top:3px;">38,50 zł</div>
+                </div>
+                <div style="width:28px;height:28px;background:#E4FD71;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#0D1B2A;flex-shrink:0;">+</div>
+              </div>
+              <div style="background:#0D1B2A;border-radius:10px;padding:11px 13px;display:flex;align-items:center;justify-content:space-between;margin-top:auto;">
+                <div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.5);">3 produkty · przegląd 900h</div>
+                  <div style="font-size:12px;font-weight:600;color:white;">170,40 zł</div>
+                </div>
+                <div style="background:#E4FD71;color:#0D1B2A;font-size:8px;font-weight:600;padding:7px 12px;border-radius:7px;">Zamów →</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 5: SERWIS -->
+      <!-- 5: SERWIS — redesign -->
       <div class="screen-item">
         <div class="screen-label">Umów serwis</div>
         <div class="screen-phone-shell">
           <div class="phone-pill"></div>
-          <div class="phone-screen">
-            <div class="ps-topbar">
-              <div><div class="ps-title">📍 Umów Serwis</div><div class="ps-sub">traktor.com.pl · Rzeszów</div></div>
+          <div class="phone-screen" style="background:#F8F9FB;">
+            <div class="ps-topbar" style="background:#0D1B2A;">
+              <div><div class="ps-title">Umów serwis</div><div class="ps-sub">traktor.com.pl · Rzeszów</div></div>
+              <span style="font-size:16px;">📍</span>
             </div>
-            <div class="ps-body">
-              <div class="ps-card" style="margin-bottom:10px"><div class="ps-card-accent blue"></div><div style="padding-left:10px"><div class="ps-card-title">Przegląd 900h — MT3.40 HST</div><div class="ps-card-sub">Szac. czas: 3–4h · Odbiór możliwy</div><div class="ps-card-tag blue-tag">Serwis autoryzowany</div></div></div>
-              <div class="ps-label">Wybierz termin</div>
-              <div class="ps-slot sel"><div class="ps-slot-date">Czwartek, 5 cze 2025</div><div class="ps-slot-time">09:00–12:00 · wybrano ✓</div></div>
-              <div class="ps-slot"><div class="ps-slot-date">Piątek, 6 cze 2025</div><div class="ps-slot-time">13:00–16:00</div></div>
-              <div class="ps-slot"><div class="ps-slot-date">Poniedziałek, 9 cze</div><div class="ps-slot-time">08:00–11:00</div></div>
-              <div class="ps-green-btn">📅 Potwierdź wizytę serwisową</div>
+            <div class="ps-body" style="display:flex;flex-direction:column;gap:7px;">
+              <div style="background:#0D1B2A;border-radius:10px;padding:11px 12px;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                  <div style="width:28px;height:28px;background:#1B4FA0;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🔧</div>
+                  <div>
+                    <div style="font-size:10px;font-weight:600;color:white;">Przegląd 900h</div>
+                    <div style="font-size:7px;color:rgba(255,255,255,0.45);margin-top:1px;">LS MT3.40 HST · szac. 3–4h</div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:5px;flex-wrap:wrap;">
+                  <div style="font-size:7px;font-weight:600;padding:3px 8px;border-radius:4px;background:rgba(27,79,160,0.5);color:#A8C4F0;">Serwis autoryzowany LS</div>
+                  <div style="font-size:7px;font-weight:600;padding:3px 8px;border-radius:4px;background:rgba(228,253,113,0.12);color:#E4FD71;">Odbiór door-to-door</div>
+                </div>
+              </div>
+              <div style="font-size:8px;font-weight:600;color:#8A96A8;text-transform:uppercase;letter-spacing:0.8px;">Wybierz termin</div>
+              <div style="background:white;border-radius:9px;padding:9px 11px;border:1.5px solid #1B4FA0;display:flex;align-items:center;gap:9px;">
+                <div style="flex:1;">
+                  <div style="font-size:9px;font-weight:600;color:#1B4FA0;">Czwartek, 5 cze 2025</div>
+                  <div style="font-size:8px;color:#8A96A8;margin-top:1px;">09:00 – 12:00</div>
+                </div>
+                <div style="width:18px;height:18px;border-radius:50%;background:#1B4FA0;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;flex-shrink:0;">✓</div>
+              </div>
+              <div style="background:white;border-radius:9px;padding:9px 11px;border:1px solid #E4E8F0;display:flex;align-items:center;gap:9px;">
+                <div style="flex:1;">
+                  <div style="font-size:9px;font-weight:600;color:#0D1B2A;">Piątek, 6 cze 2025</div>
+                  <div style="font-size:8px;color:#8A96A8;margin-top:1px;">13:00 – 16:00</div>
+                </div>
+                <div style="width:18px;height:18px;border-radius:50%;border:1.5px solid #D0D8E8;flex-shrink:0;"></div>
+              </div>
+              <div style="background:white;border-radius:9px;padding:9px 11px;border:1px solid #E4E8F0;display:flex;align-items:center;gap:9px;">
+                <div style="flex:1;">
+                  <div style="font-size:9px;font-weight:600;color:#0D1B2A;">Poniedziałek, 9 cze</div>
+                  <div style="font-size:8px;color:#8A96A8;margin-top:1px;">08:00 – 11:00</div>
+                </div>
+                <div style="width:18px;height:18px;border-radius:50%;border:1.5px solid #D0D8E8;flex-shrink:0;"></div>
+              </div>
+              <div style="background:#E4FD71;border-radius:10px;padding:12px;text-align:center;margin-top:auto;">
+                <div style="font-size:9px;font-weight:600;color:#0D1B2A;">Potwierdź wizytę serwisową →</div>
+                <div style="font-size:7px;color:#5A7A1A;margin-top:2px;">Otrzymasz potwierdzenie SMS</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1204,7 +1279,7 @@ body {
           <li>Mapa oddziałów — Rzeszów, Szczecin, dealerzy</li>
           <li>Umów wizytę serwisową online</li>
           <li>Zamów odbiór maszyny door-to-door</li>
-          <li>śledzenie statusu zlecenia</li>
+          <li>Śledzenie statusu zlecenia</li>
         </ul>
       </div>
       <div class="feat-card">
@@ -1214,7 +1289,7 @@ body {
         <ul class="feat-list">
           <li>Instrukcje obsługi PDF (dostępne offline)</li>
           <li>Poradniki wideo po polsku</li>
-          <li>Kompatybilny osprzet dla każdego modelu</li>
+          <li>Kompatybilny osprzęt dla każdego modelu</li>
           <li>Informacje o dofinansowaniach ARiMR</li>
         </ul>
       </div>
@@ -1238,7 +1313,7 @@ body {
   <div class="page">
     <div class="sh">
       <div class="sh-eyebrow">Analiza rynku</div>
-      <div class="sh-title">My vs John Deere &amp; Kubota</div>
+      <div class="sh-title">My vs John Deere & Kubota</div>
       <div class="sh-sub">Żadna istniejąca aplikacja nie obsługuje polskiego rynku, języka ani lokalnego serwisu. To nasza unikalna przewaga.</div>
     </div>
     <div class="table-outer">
