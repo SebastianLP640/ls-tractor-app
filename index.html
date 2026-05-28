@@ -923,8 +923,6 @@ body {
     <button class="nav-tab" onclick="go('screens',this)">Ekrany</button>
     <button class="nav-tab" onclick="go('features',this)">Funkcje</button>
     <button class="nav-tab" onclick="go('compare',this)">Konkurencja</button>
-    <button class="nav-tab" onclick="go('roadmap',this)">Roadmap</button>
-    <button class="nav-tab" onclick="go('deploy',this)">Deploy</button>
   </div>
   <button class="nav-mobile-btn" onclick="toggleDrawer()" aria-label="Menu">☰</button>
 </nav>
@@ -933,8 +931,6 @@ body {
   <button class="nav-tab" id="md-screens" onclick="go('screens',this);toggleDrawer()">Ekrany</button>
   <button class="nav-tab" id="md-features" onclick="go('features',this);toggleDrawer()">Funkcje</button>
   <button class="nav-tab" id="md-compare" onclick="go('compare',this);toggleDrawer()">Konkurencja</button>
-  <button class="nav-tab" id="md-roadmap" onclick="go('roadmap',this);toggleDrawer()">Roadmap</button>
-  <button class="nav-tab" id="md-deploy" onclick="go('deploy',this);toggleDrawer()">Deploy</button>
 </div>
 
 
@@ -952,7 +948,7 @@ body {
       </div>
       <div class="hero-numbers">
         <div><div class="hero-num-val"><span>7</span></div><div class="hero-num-lbl">modułów</div></div>
-        <div><div class="hero-num-val">3<span>×</span></div><div class="hero-num-lbl">fazy MVP</div></div>
+
         <div><div class="hero-num-val"><span>#1</span></div><div class="hero-num-lbl">jedyna PL aplikacja</div></div>
       </div>
     </div>
@@ -1399,137 +1395,6 @@ body {
 </div>
 
 <!-- ══ ROADMAP ══ -->
-<div id="s-roadmap" class="section">
-  <div class="page">
-    <div class="sh">
-      <div class="sh-eyebrow">Plan wdrożenia</div>
-      <div class="sh-title">3 fazy — od MVP do telematyki</div>
-    </div>
-    <div class="phases-grid">
-      <div class="phase now">
-        <div class="phase-eyebrow">Faza 1 · MVP</div>
-        <div class="phase-time">3–4 miesiące</div>
-        <div class="phase-name">Fundament</div>
-        <div class="phase-tags">
-          <div class="ptag g">Garaż / moja maszyna</div>
-          <div class="ptag g">Harmonogram LS</div>
-          <div class="ptag g">Push notifications</div>
-          <div class="ptag g">Instrukcje PDF offline</div>
-          <div class="ptag g">Sklep z częściami</div>
-          <div class="ptag g">Mapa dealerów PL</div>
-          <div class="ptag g">Kontakt z serwisem</div>
-        </div>
-      </div>
-      <div class="phase">
-        <div class="phase-eyebrow">Faza 2</div>
-        <div class="phase-time">+3–6 miesięcy</div>
-        <div class="phase-name">Serwis Online</div>
-        <div class="phase-tags">
-          <div class="ptag">Umówienie wizyty</div>
-          <div class="ptag">Odbiór door-to-door</div>
-          <div class="ptag">Asystent awarii</div>
-          <div class="ptag">Kody błędów LS (PL)</div>
-          <div class="ptag">Historia serwisu</div>
-          <div class="ptag">Status zlecenia</div>
-          <div class="ptag">Poradniki wideo PL</div>
-        </div>
-      </div>
-      <div class="phase">
-        <div class="phase-eyebrow">Faza 3</div>
-        <div class="phase-time">+6–12 miesięcy</div>
-        <div class="phase-name">Telematyka</div>
-        <div class="phase-tags">
-          <div class="ptag b">OBD/Bluetooth</div>
-          <div class="ptag b">Monitoring na żywo</div>
-          <div class="ptag b">Geofencing</div>
-          <div class="ptag b">Auto-odczyt mth</div>
-          <div class="ptag b">Dashboard paliwa</div>
-          <div class="ptag b">Predykcja awarii AI</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="sh" style="margin-top:56px">
-      <div class="sh-eyebrow">Architektura</div>
-      <div class="sh-title">Stos technologiczny</div>
-    </div>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <div class="tech-head">Aplikacja mobilna</div>
-        <div class="tech-row"><div class="tech-dot"></div>React Native (iOS + Android)</div>
-        <div class="tech-row"><div class="tech-dot"></div>Tryb offline-first</div>
-        <div class="tech-row"><div class="tech-dot"></div>Firebase Push (FCM)</div>
-        <div class="tech-row"><div class="tech-dot"></div>Google Maps SDK</div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-head">Backend API</div>
-        <div class="tech-row"><div class="tech-dot"></div>Node.js / FastAPI</div>
-        <div class="tech-row"><div class="tech-dot"></div>PostgreSQL</div>
-        <div class="tech-row"><div class="tech-dot"></div>REST + WebSocket</div>
-        <div class="tech-row"><div class="tech-dot"></div>Redis (cache)</div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-head">Integracje</div>
-        <div class="tech-row"><div class="tech-dot"></div>Magento / ERP traktor.com.pl</div>
-        <div class="tech-row"><div class="tech-dot"></div>LS Tractor API (modele)</div>
-        <div class="tech-row"><div class="tech-dot"></div>Faza 3: OBD-II Bluetooth</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ DEPLOY ══ -->
-<div id="s-deploy" class="section">
-  <div class="page">
-    <div class="sh">
-      <div class="sh-eyebrow">Infrastruktura</div>
-      <div class="sh-title">GitHub + Cloudflare Pages</div>
-      <div class="sh-sub">Repozytorium gotowe. Poniżej kroki wdrożenia — link publiczny gotowy w 5 minut.</div>
-    </div>
-    <div class="deploy-box">
-      <div>
-        <div class="deploy-title">Struktura repozytorium</div>
-        <div class="deploy-desc">Jeden plik HTML gotowy do hostowania. Każdy push na main automatycznie aktualizuje stronę na Cloudflare Pages.</div>
-        <div class="code-block">
-          <span class="dim">ls-tractor-app/</span><br>
-          ├── index.html&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="dim"># Cała aplikacja demo</span><br>
-          ├── wrangler.toml&nbsp;<span class="dim"># Cloudflare config</span><br>
-          └── README.md<br>
-          <br>
-          <span class="dim"># Deploy URL:</span><br>
-          ls-tractor-app.pages.dev
-        </div>
-      </div>
-      <div class="deploy-steps">
-        <div class="deploy-step"><div class="deploy-step-n">1</div><div>Wejdź na <strong>dash.cloudflare.com</strong></div></div>
-        <div class="deploy-step"><div class="deploy-step-n">2</div><div>Workers &amp; Pages → <strong>Create → Pages</strong></div></div>
-        <div class="deploy-step"><div class="deploy-step-n">3</div><div>Connect to Git → wybierz <strong>ls-tractor-app</strong></div></div>
-        <div class="deploy-step"><div class="deploy-step-n">4</div><div>Build command: <strong>puste</strong>, output dir: <strong>/</strong></div></div>
-        <div class="deploy-step"><div class="deploy-step-n">5</div><div><strong>Save &amp; Deploy</strong> — gotowy link!</div></div>
-      </div>
-    </div>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <div class="tech-head">GitHub Repo</div>
-        <div class="tech-row"><div class="tech-dot"></div>sebastianlp640/ls-tractor-app</div>
-        <div class="tech-row"><div class="tech-dot"></div>Visibility: Public</div>
-        <div class="tech-row"><div class="tech-dot"></div>Branch: main</div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-head">Cloudflare Pages</div>
-        <div class="tech-row"><div class="tech-dot"></div>Build command: (puste)</div>
-        <div class="tech-row"><div class="tech-dot"></div>Output dir: /</div>
-        <div class="tech-row"><div class="tech-dot"></div>SSL automatyczny ✓</div>
-      </div>
-      <div class="tech-card">
-        <div class="tech-head">Wynik</div>
-        <div class="tech-row"><div class="tech-dot"></div>Publiczny link w 5 min</div>
-        <div class="tech-row"><div class="tech-dot"></div>Auto-deploy przy push</div>
-        <div class="tech-row"><div class="tech-dot"></div>Darmowy hosting ✓</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script>
 function go(id, btn) {
