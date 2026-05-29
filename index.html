@@ -485,6 +485,7 @@ body {
   .screens-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    width: 100%;
   }
   .screens-scroll {
     transform-origin: top left;
@@ -494,6 +495,7 @@ body {
     overflow-x: visible;
     padding: 0 0 16px 0;
     margin-bottom: calc(-40% + 16px);
+    touch-action: pan-x;
   }
 }
 
