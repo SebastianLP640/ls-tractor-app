@@ -474,9 +474,12 @@ body {
 }
 .screen-phone-shell .phone-pill { margin-bottom: 7px; }
 .screen-phone-shell .phone-screen {
-  height: 480px;
+  height: 400px;
   min-height: unset;
   overflow: hidden;
+}
+.screen-phone-shell.tall .phone-screen {
+  height: 480px;
 }
 @media (max-width: 640px) {
   .screens-scroll {
@@ -492,7 +495,8 @@ body {
     border-radius: 36px;
     padding: 14px 11px;
   }
-  .screen-phone-shell .phone-screen {
+  .screen-phone-shell .phone-screen,
+  .screen-phone-shell.tall .phone-screen {
     height: auto;
     min-height: unset;
     overflow: visible;
@@ -1089,7 +1093,7 @@ body {
       <!-- SCREEN 1: GŁÓWNA -->
       <div class="screen-item">
         <div class="screen-label">Główna</div>
-        <div class="screen-phone-shell">
+        <div class="screen-phone-shell tall">
           <div class="phone-pill"></div>
           <div class="phone-screen">
             <div class="ps-topbar" style="background:#0D1B2A;">
