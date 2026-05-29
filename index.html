@@ -483,19 +483,36 @@ body {
 }
 @media (max-width: 640px) {
   .screens-scroll-wrapper {
+    width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    width: 100%;
   }
   .screens-scroll {
-    transform-origin: top left;
-    transform: scale(0.6);
-    width: calc(100% / 0.6);
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 0 16px 16px;
+    width: max-content;
     overflow-x: visible;
-    padding: 0 0 16px 0;
-    margin-bottom: calc(-40% + 16px);
-    touch-action: pan-x;
+  }
+  .screen-item {
+    flex-shrink: 0;
+  }
+  .screen-phone-shell {
+    width: 160px;
+    border-radius: 26px;
+    padding: 10px 7px;
+  }
+  .screen-phone-shell .phone-screen {
+    height: 338px;
+  }
+  .screen-phone-shell.tall .phone-screen {
+    height: 406px;
+  }
+  .screen-phone-shell .phone-pill {
+    width: 48px;
+    height: 14px;
+    margin-bottom: 6px;
   }
 }
 
